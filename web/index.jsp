@@ -1,7 +1,7 @@
 <%response.addHeader("Cache-Control","no-cache");%>
 <% if (request.getAttribute("checkError") == null){ request.setAttribute("checkError", true);}%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background: rgba(186, 186, 236, 0.41)">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -19,15 +19,15 @@
         <div>
             <label class ="input_label" >Login</label><br />
             <% if ((boolean) request.getAttribute("checkError")){%>
-                <input class = "input" type = "text" name = "login"/><br/>
+            <input class = "input" type = "text" name = "login"/><br/>
             <% } else { %>
-                <input class = "input_error" type = "text" name = "login"/><br/>
+            <input class = "input_error" type = "text" name = "login" required placeholder="This field is required" /><br/>
             <% } %>
             <label class ="input_label">Password</label><br />
             <% if ((boolean) request.getAttribute("checkError")){%>
             <input class = "input" type = "password" name = "password"/><br/>
             <% } else { %>
-            <input class = "input_error" type = "password" name = "password"/><br/>
+            <input class = "input_error" type = "password" name = "password" required placeholder="This field is required" /><br/>
             <% } %>
 
             <input type="submit" class="button_index" style="vertical-align:middle" name = "button" value=Enter>

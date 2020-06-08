@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Main {
-    public static void main(String arg[]){
+    public static void main(String arg[]) throws Exception {
 //        SimpleDateFormat test = new SimpleDateFormat("dd-MM-yyyy");
 //        try {
 //            Date d = test.parse("27-10-1999");
@@ -43,6 +43,8 @@ public class Main {
         }
         timeCouch.setinitials("Man");
 
+        DataBase db = new DataBase();
+        db.CreateTable();
         Branch branch1 = new Branch();
         branch1.setId(6);
         branch1.setNameBranch("11");
